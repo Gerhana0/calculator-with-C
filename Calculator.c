@@ -1,7 +1,3 @@
-//Faadhilah Hana Gustie Fatimah
-//L0124012
-//Week 4 - Tugas 3 Materi CFunction
-
 #include <stdio.h>
 #include <math.h>
 void operasi(float a, float b, char c[]){
@@ -23,9 +19,8 @@ void operasi(float a, float b, char c[]){
         }
     } else if (strcmp(c,"pow") == 0)
     {
-        float hasil;
-        hasil = pow(a,b);
-        printf("%f to the power of %f is %.2f",a,b,hasil);
+        float conclusion = pow(a,b);
+        printf("%f to the power of %f is %.2f",a,b,conslusion);
     } else {
         printf("error");
     }
@@ -36,8 +31,8 @@ void operasi1(float a){
         printf("error");
     } else
     {
-        float hasil = sqrt(a);
-        printf("sqrt %f is %f",a,hasil);
+        float conclusion = sqrt(a);
+        printf("sqrt %f is %f",a,conclusion);
     }
     
 }
@@ -46,18 +41,18 @@ int main()
 {
     float a,b;
     char c[10];
-    printf("Kalkulator Sederhana\n");
-    printf("masukkan operasi (+,-,*,/,pow,sqrt) = ");
+    printf("Calculator\n");
+    printf("Add operation (+,-,*,/,pow,sqrt) = ");
     scanf("%9s",&c);
     if (strcmp(c,"sqrt")==0) {
-        printf("masukkan angka positif = ");
+        printf("add number = ");
         scanf("%f",&a);
         operasi1(a);
         
     } else {
-        printf("masukkan angka1 = ");
+        printf("add number 1 = ");
         scanf("%f",&a);
-        printf("masukkan angka1 = ");
+        printf("add number 2 = ");
         scanf("%f",&b);
         operasi(a,b,c);
     }
